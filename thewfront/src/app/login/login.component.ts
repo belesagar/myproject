@@ -88,6 +88,7 @@ export class LoginComponent implements OnInit {
       this.successMessage = "";
      
     }
+    this.commonservice.hideloader();
   }
 
   verifyOtp()

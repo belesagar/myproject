@@ -26,10 +26,10 @@ export class OrderlistComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.commonservice.showloader();
     let apiUrl = Constant.API_URL+`getOrderlist`;
     return this.http.get(apiUrl).subscribe(response => { 
-      console.log(response)
+      // console.log(response)
       if(response['ERROR_CODE'] == 0)
       {
         this.responceData = response['DATA'];
@@ -38,11 +38,13 @@ export class OrderlistComponent implements OnInit {
         this.errorMessage = response['ERROR_DESCRIPTION'];
         this.successMessage = ""; 
       }
+      this.commonservice.hideloader();
      
     });
 
   }
 
+  //This code for showing amount of the product
   display(value)
   {
       this.show = false;

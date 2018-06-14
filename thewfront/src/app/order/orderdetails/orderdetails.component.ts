@@ -35,7 +35,7 @@ export class OrderdetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.commonservice.showloader();
     //This service for loading script
     this.commonservice.loadScript(url);
 
@@ -43,10 +43,10 @@ export class OrderdetailsComponent implements OnInit {
     this.postData = {
       order_id: this.order_id
     };
-    console.log(this.postData); 
+    
     let apiUrl = Constant.API_URL+`getOrderDetails`;
       return this.http.post(apiUrl,this.postData).subscribe(response => {
-        console.log(response)
+       
         if(response['ERROR_CODE'] == 0)
         {
           if(response['DATA'].length != 0)
@@ -64,7 +64,7 @@ export class OrderdetailsComponent implements OnInit {
           this.errorMessage = response['ERROR_DESCRIPTION'];
           this.successMessage = "";
         }
-       
+        this.commonservice.hideloader();
       });
 
   }

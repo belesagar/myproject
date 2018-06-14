@@ -392,6 +392,7 @@ var CommonService = /** @class */ (function () {
         });
     };
     CommonService.prototype.showloader = function () {
+        console.log("Loader call");
         this.spinnerService.show();
     };
     CommonService.prototype.hideloader = function () {
@@ -1041,6 +1042,7 @@ var LoginComponent = /** @class */ (function () {
             this.errorMessage = "Enter required fields.";
             this.successMessage = "";
         }
+        this.commonservice.hideloader();
     };
     LoginComponent.prototype.verifyOtp = function () {
     };
@@ -1195,16 +1197,15 @@ var OrderdetailsComponent = /** @class */ (function () {
     }
     OrderdetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.commonservice.showloader();
         //This service for loading script
         this.commonservice.loadScript(url);
         this.route.params.subscribe(function (params) { _this.order_id = params['id']; });
         this.postData = {
             order_id: this.order_id
         };
-        console.log(this.postData);
         var apiUrl = __WEBPACK_IMPORTED_MODULE_2__constant_constant_component__["a" /* Constant */].API_URL + "getOrderDetails";
         return this.http.post(apiUrl, this.postData).subscribe(function (response) {
-            console.log(response);
             if (response['ERROR_CODE'] == 0) {
                 if (response['DATA'].length != 0) {
                     _this.orderdetails = response['DATA'][0];
@@ -1221,6 +1222,7 @@ var OrderdetailsComponent = /** @class */ (function () {
                 _this.errorMessage = response['ERROR_DESCRIPTION'];
                 _this.successMessage = "";
             }
+            _this.commonservice.hideloader();
         });
     };
     OrderdetailsComponent = __decorate([
@@ -1290,9 +1292,10 @@ var OrderlistComponent = /** @class */ (function () {
     }
     OrderlistComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.commonservice.showloader();
         var apiUrl = __WEBPACK_IMPORTED_MODULE_2__constant_constant_component__["a" /* Constant */].API_URL + "getOrderlist";
         return this.http.get(apiUrl).subscribe(function (response) {
-            console.log(response);
+            // console.log(response)
             if (response['ERROR_CODE'] == 0) {
                 _this.responceData = response['DATA'];
             }
@@ -1300,8 +1303,10 @@ var OrderlistComponent = /** @class */ (function () {
                 _this.errorMessage = response['ERROR_DESCRIPTION'];
                 _this.successMessage = "";
             }
+            _this.commonservice.hideloader();
         });
     };
+    //This code for showing amount of the product
     OrderlistComponent.prototype.display = function (value) {
         this.show = false;
         if (value != "" && value != null) {
