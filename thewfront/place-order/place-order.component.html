@@ -1,0 +1,113 @@
+<div class="m-grid__item m-grid__item--fluid m-wrapper">
+  <!-- <div class="m-subheader ">
+  <div class="d-flex align-items-center">
+    <div class="mr-auto">
+      <h3 class="m-subheader__title">
+        Change Password
+      </h3>								
+    </div>							
+  </div>
+</div> -->
+
+<div class="m-content">
+  <div class="row">
+    <div class="col-12">
+      <div class="m-portlet m-portlet--full-height m-portlet--tabs  ">
+        <div class="m-portlet__head">
+          <div class="m-portlet__head-tools">	
+            <div class="headingpage">
+              <i class="flaticon-lock-1"></i>												
+              
+              Place your order
+
+            </div>											
+          </div>										
+        </div>
+
+          <!--begin::Form-->
+									<form class="m-form m-form--fit m-form--label-align-right" novalidate #formdata="ngForm" (ngSubmit) = "onSubmit(formdata)" >
+										<div class="m-portlet__body">
+											
+											<div class="form-group m-form__group">
+												<label for="">
+													Pick up date
+												</label>
+												<input type="date" name="pick_up_date" [(ngModel)]="pick_up_date" #pickupdate="ngModel" class="form-control m-input" placeholder="Enter date">
+												<div class="form-control-feedback" *ngIf="pickupdate.errors?.required && pickupdate.touched">
+													Please Enter Date
+												</div>
+											</div>
+											<div class="form-group m-form__group">
+												<label for="exampleSelect1">
+													Pick up Slot
+												</label>
+												<select class="form-control m-input m-input--air" id="exampleSelect1" name="slot" [(ngModel)]="pick_up_slot" #pickupslot="ngModel">
+                          <option value="">
+                            1
+                          </option>
+                          <option>
+                            2
+                          </option>
+                          <option>
+                            3
+                          </option>
+                          <option>
+                            4
+                          </option>
+                          <option>
+                            5
+                          </option>
+                        </select>
+                        <div class="form-control-feedback" *ngIf="pickupslot.errors?.required && pickupslot.touched">
+													Please Select Slot
+												</div>
+                      </div>
+                      <div class="form-group m-form__group">
+												<label for="">
+													Name
+												</label>
+												<input type="text" name="name" [(ngModel)]="name" #username="ngModel" class="form-control m-input" placeholder="Enter date">
+												<div class="form-control-feedback" *ngIf="username.errors?.required && username.touched">
+													Please Enter Name
+												</div>
+                      </div>
+                      <div class="form-group m-form__group">
+												<label for="">
+													Mobile No.
+												</label>
+												<input type="number" name="mobile_no" [(ngModel)]="mobile_no" #mobileno="ngModel" class="form-control m-input" placeholder="Enter date">
+												<div class="form-control-feedback" *ngIf="mobileno.errors?.required && mobileno.touched">
+													Please Mobile No.
+												</div>
+											</div>
+											<div class="form-group m-form__group">
+												<label for="exampleTextarea">
+													Address
+												</label>
+                        <textarea class="form-control m-input" name="address" id="exampleTextarea" rows="3"></textarea>
+                        <div class="form-control-feedback" *ngIf="pickupdate.errors?.required && pickupdate.touched">
+													Please Enter Address.
+												</div>
+											</div>
+											
+										</div>
+										<div class="m-portlet__foot m-portlet__foot--fit">
+											<div class="m-form__actions">
+												<button type="submit" class="btn btn-primary">
+													Submit
+												</button>
+												<button type="reset" class="btn btn-secondary">
+													Cancel
+												</button>
+											</div>
+										</div>
+									</form>
+									<!--end::Form-->
+           
+      </div>
+    
+	</div>
+	</div>
+</div>
+
+</div>
