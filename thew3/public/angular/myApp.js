@@ -1,0 +1,1 @@
+var app = angular.module("myApp", ["ngRoute"]).constant('API_URL','http://localhost/thew/public/index.php/'); 
