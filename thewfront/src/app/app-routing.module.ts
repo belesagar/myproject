@@ -11,6 +11,9 @@ import { UserlistComponent } from './users/userlist/userlist.component';
 import { PlaceOrderComponent } from './order/place-order/place-order.component';
 import { OrderlistComponent } from './order/orderlist/orderlist.component';
 import { OrderdetailsComponent } from './order/orderdetails/orderdetails.component';
+import { ErrorpageComponent } from './layout/errorpage/errorpage.component';
+import { ServicesComponent } from './services/services.component';
+import { RefferandearnComponent } from './refferandearn/refferandearn.component';
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
@@ -22,11 +25,14 @@ const routes: Routes = [
     path: '', 
     component: MiddelComponent,
     children: [
-      { path: 'dashboard', component: DashboardComponent, pathMatch: 'full'},
+      {path: 'dashboard', component: DashboardComponent, pathMatch: 'full'},
       {path:'orderlist', component:OrderlistComponent},
       {path:'userlist', component:UserlistComponent},
       {path:'orderdetails/:id', component:OrderdetailsComponent},
       {path:'placeorder', component:PlaceOrderComponent},
+      {path:'services', component:ServicesComponent},
+      {path:'refferandearn', component:RefferandearnComponent},
+      {path:'errorpage', component:ErrorpageComponent},
     ]
 },
   {
@@ -40,4 +46,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [DashboardComponent,LoginComponent,HeaderComponent,VerifyotpComponent,UserlistComponent,PlaceOrderComponent,OrderdetailsComponent,LogoutComponent]
+export const routingComponents = [DashboardComponent,LoginComponent,HeaderComponent,VerifyotpComponent,UserlistComponent,PlaceOrderComponent,OrderdetailsComponent,LogoutComponent,ErrorpageComponent,ServicesComponent,RefferandearnComponent]

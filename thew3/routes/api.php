@@ -38,6 +38,9 @@ Route::group(['middleware' => ['web','Cors']], function () {
 	Route::get('getOrderlist','apiController@getOrderlist')->name('getOrderlist');  
 	Route::post('getOrderDetails','apiController@getOrderDetails')->name('getOrderDetails');  
 	Route::get('getLastOrderData','apiController@getLastOrderData')->name('getLastOrderData');  
+
+	//This route for getting services
+	Route::get('getServices','apiController@getServicesData')->name('getServices');  
 	
 });
 

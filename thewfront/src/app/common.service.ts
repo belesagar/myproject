@@ -81,7 +81,6 @@ export class CommonService {
 
   showloader()
   {
-    console.log("Loader call");
     this.spinnerService.show();
   }
 

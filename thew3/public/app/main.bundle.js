@@ -35,12 +35,18 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__order_place_order_place_order_component__ = __webpack_require__("./src/app/order/place-order/place-order.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__order_orderlist_orderlist_component__ = __webpack_require__("./src/app/order/orderlist/orderlist.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__order_orderdetails_orderdetails_component__ = __webpack_require__("./src/app/order/orderdetails/orderdetails.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__layout_errorpage_errorpage_component__ = __webpack_require__("./src/app/layout/errorpage/errorpage.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_services_component__ = __webpack_require__("./src/app/services/services.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__refferandearn_refferandearn_component__ = __webpack_require__("./src/app/refferandearn/refferandearn.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -68,6 +74,9 @@ var routes = [
             { path: 'userlist', component: __WEBPACK_IMPORTED_MODULE_8__users_userlist_userlist_component__["a" /* UserlistComponent */] },
             { path: 'orderdetails/:id', component: __WEBPACK_IMPORTED_MODULE_11__order_orderdetails_orderdetails_component__["a" /* OrderdetailsComponent */] },
             { path: 'placeorder', component: __WEBPACK_IMPORTED_MODULE_9__order_place_order_place_order_component__["a" /* PlaceOrderComponent */] },
+            { path: 'services', component: __WEBPACK_IMPORTED_MODULE_13__services_services_component__["a" /* ServicesComponent */] },
+            { path: 'refferandearn', component: __WEBPACK_IMPORTED_MODULE_14__refferandearn_refferandearn_component__["a" /* RefferandearnComponent */] },
+            { path: 'errorpage', component: __WEBPACK_IMPORTED_MODULE_12__layout_errorpage_errorpage_component__["a" /* ErrorpageComponent */] },
         ]
     },
     {
@@ -87,7 +96,7 @@ var AppRoutingModule = /** @class */ (function () {
     return AppRoutingModule;
 }());
 
-var routingComponents = [__WEBPACK_IMPORTED_MODULE_5__dashboard_dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_2__login_login_component__["a" /* LoginComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_header_header_component__["a" /* HeaderComponent */], __WEBPACK_IMPORTED_MODULE_4__verifyotp_verifyotp_component__["a" /* VerifyotpComponent */], __WEBPACK_IMPORTED_MODULE_8__users_userlist_userlist_component__["a" /* UserlistComponent */], __WEBPACK_IMPORTED_MODULE_9__order_place_order_place_order_component__["a" /* PlaceOrderComponent */], __WEBPACK_IMPORTED_MODULE_11__order_orderdetails_orderdetails_component__["a" /* OrderdetailsComponent */], __WEBPACK_IMPORTED_MODULE_3__logout_logout_component__["a" /* LogoutComponent */]];
+var routingComponents = [__WEBPACK_IMPORTED_MODULE_5__dashboard_dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_2__login_login_component__["a" /* LoginComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_header_header_component__["a" /* HeaderComponent */], __WEBPACK_IMPORTED_MODULE_4__verifyotp_verifyotp_component__["a" /* VerifyotpComponent */], __WEBPACK_IMPORTED_MODULE_8__users_userlist_userlist_component__["a" /* UserlistComponent */], __WEBPACK_IMPORTED_MODULE_9__order_place_order_place_order_component__["a" /* PlaceOrderComponent */], __WEBPACK_IMPORTED_MODULE_11__order_orderdetails_orderdetails_component__["a" /* OrderdetailsComponent */], __WEBPACK_IMPORTED_MODULE_3__logout_logout_component__["a" /* LogoutComponent */], __WEBPACK_IMPORTED_MODULE_12__layout_errorpage_errorpage_component__["a" /* ErrorpageComponent */], __WEBPACK_IMPORTED_MODULE_13__services_services_component__["a" /* ServicesComponent */], __WEBPACK_IMPORTED_MODULE_14__refferandearn_refferandearn_component__["a" /* RefferandearnComponent */]];
 
 
 /***/ }),
@@ -221,12 +230,18 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ngx_loading__ = __webpack_require__("./node_modules/ngx-loading/ngx-loading/ngx-loading.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_ng4_loading_spinner__ = __webpack_require__("./node_modules/ng4-loading-spinner/ng4-loading-spinner.umd.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_ng4_loading_spinner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_23_ng4_loading_spinner__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__layout_errorpage_errorpage_component__ = __webpack_require__("./src/app/layout/errorpage/errorpage.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_services_component__ = __webpack_require__("./src/app/services/services.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__refferandearn_refferandearn_component__ = __webpack_require__("./src/app/refferandearn/refferandearn.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -271,7 +286,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_18__order_orderdetails_orderdetails_component__["a" /* OrderdetailsComponent */],
                 __WEBPACK_IMPORTED_MODULE_19__order_orderlist_orderlist_component__["a" /* OrderlistComponent */],
                 __WEBPACK_IMPORTED_MODULE_20__logout_logout_component__["a" /* LogoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__layout_loader_loader_component__["a" /* LoaderComponent */]
+                __WEBPACK_IMPORTED_MODULE_21__layout_loader_loader_component__["a" /* LoaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__layout_errorpage_errorpage_component__["a" /* ErrorpageComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__services_services_component__["a" /* ServicesComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__refferandearn_refferandearn_component__["a" /* RefferandearnComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -392,7 +410,6 @@ var CommonService = /** @class */ (function () {
         });
     };
     CommonService.prototype.showloader = function () {
-        console.log("Loader call");
         this.spinnerService.show();
     };
     CommonService.prototype.hideloader = function () {
@@ -481,7 +498,7 @@ module.exports = "app-dashboard {\n    width: 100%;\n}"
 /***/ "./src/app/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"m-grid__item m-grid__item--fluid m-wrapper\">\n\n    <!-- <div class=\"m-subheader \">\n      <div class=\"d-flex align-items-center\">\n        <div class=\"mr-auto\">\n          <h3 class=\"m-subheader__title\">\n            Welcome Admin\n          </h3>\t\t\t\t\t\t\t\t\n        </div>\t\t\t\t\t\t\t\n      </div>\n    </div> -->\n    <div class=\"m-content\">\t\t\t\t\t\t\n      <div class=\"row\">\n        \n        <div class=\"col-xl-4\" style=\"display: none\">\n          <div class=\"m-portlet\">\n            <a href=\"\"> \n              <div class=\"loantypemainbx\">\n                <div class=\"loantypeimgbx\">\n                    <img src=\"./assets/images/loan-type/personal_loan.png\" alt=\"finance\"/>\n                </div>\n                <div class=\"loantypebx\">\n                    <h3 class=\"m-portlet__head-text hedingtext1\"> Place Order </h3>\n                </div>\n              </div>\n            </a>\n          </div>\n        </div>\n        <div class=\"col-xl-4\">\n          <div class=\"m-portlet\">\n            <a routerLink=\"/placeorder\">\n              <div class=\"loantypemainbx\">\n                <div class=\"loantypeimgbx\">\n                    <img src=\"./assets/images/loan-type/kissht-digitalcard.png\" alt=\"finance\"/>\n                </div>\n                <div class=\"loantypebx\">\n                    <h3 class=\"m-portlet__head-text hedingtext1\"> Place Order </h3>\n                </div>\n              </div>\t\t\t\t\t\t\t\t\t\t\n            </a>\n          </div>\n        </div>\n        <!-- <div class=\"col-xl-4\">\n          <div class=\"m-portlet\"> \n            <a href=\"\">\n              <div class=\"loantypemainbx\">\n                <div class=\"loantypeimgbx\">\n                    <img src=\"./assets/images/loan-type/flipkart_small_logo.jpg\" alt=\"finance\"/>\n                </div>\n                <div class=\"loantypebx\">\n                    <h3 class=\"m-portlet__head-text hedingtext1\"> Price List </h3>\t\t\t\t\t\t\t\t\t\n                </div>\n              </div>\n            </a>\n          </div>\t\t\t\t\t\t \t\t\t\n        </div>\n        <div class=\"col-xl-4\">\n          <div class=\"m-portlet\"> \n            <a href=\"\">\n              <div class=\"loantypemainbx\">\n                <div class=\"loantypeimgbx\">\n                    <img src=\"./assets/images/loan-type/amazonicon.png\" alt=\"finance\"/>\n                </div>\n                <div class=\"loantypebx\">\n                    <h3 class=\"m-portlet__head-text hedingtext1\"> Amazon </h3>\t\t\t\t\t\t\t\t\t\n                </div>\n              </div>\n            </a>\n          </div>\t\t\t\t\t\t \t\t\t\n        </div> -->\n        <div class=\"col-xl-4\">\n          <div class=\"m-portlet\"> \n            <a href=\"\" >  \n              <div class=\"loantypemainbx\">\n                <div class=\"loantypeimgbx\">\n                    <img src=\"./assets/images/loan-type/personal_loan.png\" alt=\"finance\"/>\n                </div>\n                <div class=\"loantypebx\">\n                    <h3 class=\"m-portlet__head-text hedingtext1\"> Instant Cash </h3>\t\t\t\t\t\t\t\t\t\n                </div>\n              </div>\n            </a>\n          </div>\t\t\t\t\t\t \t\t\t\n        </div>\n        \n      </div>\n    </div>\n  \n</div>"
+module.exports = "\n<div class=\"m-grid__item m-grid__item--fluid m-wrapper\">\n\n    <!-- <div class=\"m-subheader \">\n      <div class=\"d-flex align-items-center\">\n        <div class=\"mr-auto\">\n          <h3 class=\"m-subheader__title\">\n            Welcome Admin\n          </h3>\t\t\t\t\t\t\t\t\n        </div>\t\t\t\t\t\t\t\n      </div>\n    </div> -->\n    <div class=\"m-content\">\t\t\t\t\t\t\n      <div class=\"row\">\n        \n        <div class=\"col-xl-4\" style=\"display: none\">\n          <div class=\"m-portlet\">\n            <a href=\"\"> \n              <div class=\"loantypemainbx\">\n                <div class=\"loantypeimgbx\">\n                    <img src=\"./assets/images/loan-type/personal_loan.png\" alt=\"finance\"/>\n                </div>\n                <div class=\"loantypebx\">\n                    <h3 class=\"m-portlet__head-text hedingtext1\"> Place Order </h3>\n                </div>\n              </div>\n            </a>\n          </div>\n        </div>\n        <div class=\"col-xl-4\">\n          <div class=\"m-portlet\">\n            <a routerLink=\"/placeorder\">\n              <div class=\"loantypemainbx\">\n                <div class=\"loantypeimgbx\">\n                    <img src=\"./assets/images/loan-type/kissht-digitalcard.png\" alt=\"finance\"/>\n                </div>\n                <div class=\"loantypebx\">\n                    <h3 class=\"m-portlet__head-text hedingtext1\"> Place Order </h3>\n                </div>\n              </div>\t\t\t\t\t\t\t\t\t\t\n            </a>\n          </div>\n        </div>\n        <!-- <div class=\"col-xl-4\">\n          <div class=\"m-portlet\"> \n            <a href=\"\">\n              <div class=\"loantypemainbx\">\n                <div class=\"loantypeimgbx\">\n                    <img src=\"./assets/images/loan-type/flipkart_small_logo.jpg\" alt=\"finance\"/>\n                </div>\n                <div class=\"loantypebx\">\n                    <h3 class=\"m-portlet__head-text hedingtext1\"> Price List </h3>\t\t\t\t\t\t\t\t\t\n                </div>\n              </div>\n            </a>\n          </div>\t\t\t\t\t\t \t\t\t\n        </div>\n        <div class=\"col-xl-4\">\n          <div class=\"m-portlet\"> \n            <a href=\"\">\n              <div class=\"loantypemainbx\">\n                <div class=\"loantypeimgbx\">\n                    <img src=\"./assets/images/loan-type/amazonicon.png\" alt=\"finance\"/>\n                </div>\n                <div class=\"loantypebx\">\n                    <h3 class=\"m-portlet__head-text hedingtext1\"> Amazon </h3>\t\t\t\t\t\t\t\t\t\n                </div>\n              </div>\n            </a>\n          </div>\t\t\t\t\t\t \t\t\t\n        </div> -->\n        <div class=\"col-xl-4\">\n          <div class=\"m-portlet\"> \n            <a routerLink=\"/services\" >  \n              <div class=\"loantypemainbx\">\n                <div class=\"loantypeimgbx\">\n                    <img src=\"./assets/images/loan-type/personal_loan.png\" alt=\"finance\"/>\n                </div>\n                <div class=\"loantypebx\">\n                    <h3 class=\"m-portlet__head-text hedingtext1\"> Our Services </h3>\t\t\t\t\t\t\t\t\t\n                </div>\n              </div>\n            </a>\n          </div>\t\t\t\t\t\t \t\t\t\n        </div>\n        \n      </div>\n    </div>\n  \n</div>"
 
 /***/ }),
 
@@ -589,6 +606,56 @@ var AuthinterceptorsService = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__local_storage_service_service__["a" /* LocalStorageServiceService */]])
     ], AuthinterceptorsService);
     return AuthinterceptorsService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/layout/errorpage/errorpage.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/layout/errorpage/errorpage.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- begin:: Page -->\n<div class=\"m-grid m-grid--hor m-grid--root m-page\">\n  <div class=\"m-grid__item m-grid__item--fluid m-grid  m-error-6\" style=\"background-image: url(assets/app/media/img//error/bg6.jpg);\">\n    <div class=\"m-error_container\">\n      <div class=\"m-error_subtitle m--font-light\">\n        <h1>\n          Oops...\n        </h1>\n      </div>\n      <p class=\"m-error_description m--font-light\">\n        Looks like something went wrong.\n        <br>\n        We're working on it\n      </p>\n    </div>\n  </div>\n</div>\n<!-- end:: Page -->"
+
+/***/ }),
+
+/***/ "./src/app/layout/errorpage/errorpage.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ErrorpageComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ErrorpageComponent = /** @class */ (function () {
+    function ErrorpageComponent() {
+    }
+    ErrorpageComponent.prototype.ngOnInit = function () {
+    };
+    ErrorpageComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-errorpage',
+            template: __webpack_require__("./src/app/layout/errorpage/errorpage.component.html"),
+            styles: [__webpack_require__("./src/app/layout/errorpage/errorpage.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ErrorpageComponent);
+    return ErrorpageComponent;
 }());
 
 
@@ -860,7 +927,7 @@ module.exports = ".m-aside-left.m-aside-left--skin-dark {\n    background-color:
 /***/ "./src/app/layout/sidebar/sidebar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <!-- BEGIN: Aside Menu -->\n    <div id=\"m_ver_menu\"  class=\"m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark\" data-menu-vertical=\"true\" data-menu-scrollable=\"false\" data-menu-dropdown-timeout=\"500\">\n      <ul class=\"m-menu__nav  m-menu__nav--dropdown-submenu-arrow \">\n                      <li class=\"m-menu__item  m-menu__item--\" aria-haspopup=\"true\" >\n            <a  routerLink=\"/dashboard\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Home\n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n        </li>\n        \n          <li class=\"m-menu__item  m-menu__item--submenu\" aria-haspopup=\"true\" >\n            <a  routerLink=\"/placeorder\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\"> \n                    Place Order\n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n          </li>\n        \t\t\t\t\t\n          <li class=\"m-menu__item m-menu__item--submenu\" aria-haspopup=\"true\" > \n            <a  routerLink=\"/orderlist\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Order Details \n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n          </li>\n          <li class=\"m-menu__item m-menu__item--submenu\" aria-haspopup=\"true\" style=\"display: none\">\n            <a  href=\"\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Wallet \n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n          </li>\n          <li class=\"m-menu__item m-menu__item--submenu\" aria-haspopup=\"true\" >\n            <a  routerLink=\"/userlist\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Reffer & Earn \n                  </span>\n                 \n                </span>\n              </span>\n            </a>\n          </li>\n          <li class=\"m-menu__item m-menu__item--submenu\" aria-haspopup=\"true\" >\n            <a  href=\"\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Feedback \n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n          </li>\n          <li class=\"m-menu__item m-menu__item--submenu\" aria-haspopup=\"true\" >\n            <a  href=\"\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Call Us \n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n          </li>\n          <li class=\"m-menu__item m-menu__item--submenu\" aria-haspopup=\"true\" >\n            <a  routerLink=\"/logout\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Logout \n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n          </li>\n      </ul>\n    </div>\n    <!-- END: Aside Menu -->\n  </div>\n  <!-- END: Left Aside -->"
+module.exports = "<div>\n    <!-- BEGIN: Aside Menu -->\n    <div id=\"m_ver_menu\"  class=\"m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark\" data-menu-vertical=\"true\" data-menu-scrollable=\"false\" data-menu-dropdown-timeout=\"500\">\n      <ul class=\"m-menu__nav  m-menu__nav--dropdown-submenu-arrow \">\n                      <li class=\"m-menu__item  m-menu__item--\" aria-haspopup=\"true\" >\n            <a  routerLink=\"/dashboard\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Home\n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n        </li>\n        \n          <li class=\"m-menu__item  m-menu__item--submenu\" aria-haspopup=\"true\" >\n            <a  routerLink=\"/placeorder\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\"> \n                    Place Order\n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n          </li>\n        \t\t\t\t\t\n          <li class=\"m-menu__item m-menu__item--submenu\" aria-haspopup=\"true\" > \n            <a  routerLink=\"/orderlist\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Order Details \n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n          </li>\n          <li class=\"m-menu__item m-menu__item--submenu\" aria-haspopup=\"true\" style=\"display: none\">\n            <a  href=\"\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Wallet \n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n          </li>\n          <li class=\"m-menu__item m-menu__item--submenu\" aria-haspopup=\"true\" >\n            <a  routerLink=\"/refferandearn\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Reffer & Earn \n                  </span>\n                 \n                </span>\n              </span>\n            </a>\n          </li>\n          <li class=\"m-menu__item m-menu__item--submenu\" aria-haspopup=\"true\" >\n            <a  href=\"\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Feedback \n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n          </li>\n          <li class=\"m-menu__item m-menu__item--submenu\" aria-haspopup=\"true\" >\n            <a  href=\"tel:+919975541407\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Call Us \n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n          </li>\n          <li class=\"m-menu__item m-menu__item--submenu\" aria-haspopup=\"true\" >\n            <a  routerLink=\"/logout\" class=\"m-menu__link \">\n              <i class=\"m-menu__link-icon flaticon-line-graph sideicon\"></i>\n              <span class=\"m-menu__link-title\">\n                <span class=\"m-menu__link-wrap\">\n                  <span class=\"m-menu__link-text\">\n                    Logout \n                  </span>\n                  \n                </span>\n              </span>\n            </a>\n          </li>\n      </ul>\n    </div>\n    <!-- END: Aside Menu -->\n  </div>\n  <!-- END: Left Aside -->"
 
 /***/ }),
 
@@ -1192,7 +1259,7 @@ var OrderdetailsComponent = /** @class */ (function () {
             "Delivered"
         ];
         this.orderdetails = "";
-        //This code for check login    
+        //This code for check login     
         this.commonservice.checkLogin();
     }
     OrderdetailsComponent.prototype.ngOnInit = function () {
@@ -1209,7 +1276,7 @@ var OrderdetailsComponent = /** @class */ (function () {
             if (response['ERROR_CODE'] == 0) {
                 if (response['DATA'].length != 0) {
                     _this.orderdetails = response['DATA'][0];
-                    console.log(_this.orderdetails);
+                    // console.log(this.orderdetails)
                 }
                 else {
                     _this.router.navigate(['/orderlist']);
@@ -1280,6 +1347,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var OrderlistComponent = /** @class */ (function () {
     function OrderlistComponent(http, router, commonservice) {
+        // this.commonservice.checkconnection();
         this.http = http;
         this.router = router;
         this.commonservice = commonservice;
@@ -1379,6 +1447,7 @@ var PlaceOrderComponent = /** @class */ (function () {
         this.address = "";
         this.landmark = "";
         this.pincode = "";
+        // this.commonservice.checkconnection();
         //This code for check login
         this.commonservice.checkLogin();
     }
@@ -1433,6 +1502,142 @@ var PlaceOrderComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_4__common_service__["a" /* CommonService */]])
     ], PlaceOrderComponent);
     return PlaceOrderComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/refferandearn/refferandearn.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/refferandearn/refferandearn.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"m-content\">\n  <!--Begin::Main Portlet-->\n  <div class=\"row\">\n    <div class=\"col-xl-4\">\n      <!--begin:: Widgets/Blog-->\n      <div class=\"m-portlet m-portlet--bordered-semi m-portlet--full-height \">\n        <div class=\"m-portlet__head m-portlet__head--fit\">\n          <!-- <div class=\"m-portlet__head-caption\">\n            <div class=\"m-portlet__head-action\">\n              <button type=\"button\" class=\"btn btn-sm m-btn--pill  btn-brand\">\n                Blog\n              </button>\n            </div>\n          </div> -->\n        </div>\n        <div class=\"m-portlet__body\">\n          <div class=\"m-widget19\">\n            <div class=\"m-widget19__pic m-portlet-fit--top m-portlet-fit--sides\" style=\"min-height-: 286px\">\n              <img src=\"assets/app/media/img//blog/blog1.jpg\" alt=\"\">\n              <!-- <h3 class=\"m-widget19__title m--font-light\">\n                Introducing New Feature\n              </h3> -->\n              <div class=\"m-widget19__shadow\"></div>\n            </div>\n            <div class=\"m-widget19__content\">\n              <div class=\"m-widget19__header\">\n                <!-- <div class=\"m-widget19__user-img\">\n                  <img class=\"m-widget19__img\" src=\"assets/app/media/img//users/user1.jpg\" alt=\"\">\n                </div> -->\n                <div class=\"m-widget19__info\">\n                  <span class=\"m-widget19__username\">\n                    <font color=\"#716aca\">Your Refferel Code</font>\n                  </span>\n                  <br>\n                  \n                </div>\n                <div class=\"m-widget19__stats\">\n                  <span class=\"m-widget19__number m--font-brand\">\n                    ABCD12563\n                  </span>\n                </div>\n              </div>\n              <div class=\"m-widget19__body\">\n                  You can earn more reward by referring your friends. Send your referel code to your\n              </div>\n            </div>\n            <div class=\"m-widget19__action\">\n              <button type=\"button\" class=\"btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom\" style=\"text-align: center\">\n                Invite Your Friend\n              </button>\n            </div>\n          </div>\n        </div>\n      </div>\n      <!--end:: Widgets/Blog-->\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/refferandearn/refferandearn.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RefferandearnComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RefferandearnComponent = /** @class */ (function () {
+    function RefferandearnComponent() {
+    }
+    RefferandearnComponent.prototype.ngOnInit = function () {
+    };
+    RefferandearnComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-refferandearn',
+            template: __webpack_require__("./src/app/refferandearn/refferandearn.component.html"),
+            styles: [__webpack_require__("./src/app/refferandearn/refferandearn.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], RefferandearnComponent);
+    return RefferandearnComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/services.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/services/services.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"col-xl-4 \">\n  <div class=\"m-portlet m-portlet--bordered-semi m-portlet--full-height \">\n    <div class=\"m-portlet__head\">\n      <div class=\"m-portlet__head-caption\">\n        <div class=\"m-portlet__head-title\">\n          <h3 class=\"m-portlet__head-text\">\n            Our Services\n          </h3>\n        </div>\n      </div>\n    </div>\n    <div class=\"m-portlet__body\">\n      <div class=\"m-widget4\">\n        <div class=\"m-widget4__item\" *ngFor=\"let value of responceData\">\n          <div class=\"m-widget4__img m-widget4__img--logo\">\n            <img src=\"assets/app/media/img/client-logos/logo5.png\" alt=\"\">\n          </div>\n          <div class=\"m-widget4__info\">\n            <span class=\"m-widget4__title\">\n              {{value['type'] == \"wash\"?\"abc\":\"\"}}\n              {{value['type'] == \"washiron\"?\"abc + efg\":\"\"}}\n            </span>\n            <br>\n            <span class=\"m-widget4__sub\">\n              Make Metronic Great Again\n            </span>\n          </div>\n          <span class=\"m-widget4__ext\">\n            <span class=\"m-widget4__number m--font-brand\">\n                &#x20B9;{{value['service_price']}}\n            </span>\n          </span>\n        </div>\n        <!-- <div class=\"m-widget4__item\">\n          <div class=\"m-widget4__img m-widget4__img--logo\">\n            <img src=\"assets/app/media/img/client-logos/logo4.png\" alt=\"\"> \n          </div>\n          <div class=\"m-widget4__info\">\n            <span class=\"m-widget4__title\">\n              StarBucks\n            </span>\n            <br>\n            <span class=\"m-widget4__sub\">\n              Good Coffee & Snacks\n            </span>\n          </div>\n          <span class=\"m-widget4__ext\">\n            <span class=\"m-widget4__number m--font-brand\">\n              -$290\n            </span>\n          </span>\n        </div>\n        <div class=\"m-widget4__item\">\n          <div class=\"m-widget4__img m-widget4__img--logo\">\n            <img src=\"assets/app/media/img/client-logos/logo3.png\" alt=\"\">\n          </div>\n          <div class=\"m-widget4__info\">\n            <span class=\"m-widget4__title\">\n              Phyton\n            </span>\n            <br>\n            <span class=\"m-widget4__sub\">\n              A Programming Language\n            </span>\n          </div>\n          <span class=\"m-widget4__ext\">\n            <span class=\"m-widget4__number m--font-brand\">\n              +$17\n            </span>\n          </span>\n        </div>\n        <div class=\"m-widget4__item\">\n          <div class=\"m-widget4__img m-widget4__img--logo\">\n            <img src=\"assets/app/media/img/client-logos/logo2.png\" alt=\"\">\n          </div>\n          <div class=\"m-widget4__info\">\n            <span class=\"m-widget4__title\">\n              GreenMakers\n            </span>\n            <br>\n            <span class=\"m-widget4__sub\">\n              Make Green Great Again\n            </span>\n          </div>\n          <span class=\"m-widget4__ext\">\n            <span class=\"m-widget4__number m--font-brand\">\n              -$2.50\n            </span>\n          </span>\n        </div> -->\n        \n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/services/services.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServicesComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constant_constant_component__ = __webpack_require__("./src/app/constant/constant.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_service__ = __webpack_require__("./src/app/common.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ServicesComponent = /** @class */ (function () {
+    function ServicesComponent(http, router, commonservice) {
+        this.http = http;
+        this.router = router;
+        this.commonservice = commonservice;
+        this.responceData = [];
+        this.servicesArray = [];
+        this.servicesData = [];
+    }
+    ServicesComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.commonservice.showloader();
+        var apiUrl = __WEBPACK_IMPORTED_MODULE_2__constant_constant_component__["a" /* Constant */].API_URL + "getServices";
+        return this.http.get(apiUrl).subscribe(function (response) {
+            console.log(response);
+            if (response['ERROR_CODE'] == 0) {
+                _this.servicesArray = ['wash', 'washiron'];
+                _this.responceData = response['DATA'];
+                //  for(var value of this.responceData)
+                //  {  
+                //   console.log(value['type']);
+                //     if(this.servicesArray[value['type']])
+                //     {
+                //       this.servicesData.push(value);
+                //     }
+                //  }
+                //  console.log(this.servicesData)
+            }
+            else {
+            }
+            _this.commonservice.hideloader();
+        });
+    };
+    ServicesComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-services',
+            template: __webpack_require__("./src/app/services/services.component.html"),
+            styles: [__webpack_require__("./src/app/services/services.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_4__common_service__["a" /* CommonService */]])
+    ], ServicesComponent);
+    return ServicesComponent;
 }());
 
 

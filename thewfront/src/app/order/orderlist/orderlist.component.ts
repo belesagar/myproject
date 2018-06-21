@@ -20,6 +20,8 @@ export class OrderlistComponent implements OnInit {
   show: boolean = false;
 
   constructor(private http: HttpClient,private router: Router,private commonservice: CommonService) { 
+    // this.commonservice.checkconnection();
+    
     //This code for check login
     this.commonservice.checkLogin();
 

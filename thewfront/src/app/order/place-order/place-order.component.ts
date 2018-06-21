@@ -22,6 +22,7 @@ export class PlaceOrderComponent implements OnInit {
   pincode: string = "";
 
   constructor(private http: HttpClient,private router: Router,private commonservice: CommonService) {
+    // this.commonservice.checkconnection();
     //This code for check login
     this.commonservice.checkLogin();
    }

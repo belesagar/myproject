@@ -24,6 +24,9 @@ import { LogoutComponent } from './logout/logout.component';
 import { LoaderComponent } from './layout/loader/loader.component';
 import { LoadingModule } from 'ngx-loading';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
+import { ErrorpageComponent } from './layout/errorpage/errorpage.component';
+import { ServicesComponent } from './services/services.component';
+import { RefferandearnComponent } from './refferandearn/refferandearn.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
     OrderdetailsComponent,
     OrderlistComponent,
     LogoutComponent,
-    LoaderComponent
+    LoaderComponent,
+    ErrorpageComponent,
+    ServicesComponent,
+    RefferandearnComponent
   ],
   imports: [
     BrowserModule,

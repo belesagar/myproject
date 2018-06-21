@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Validator;
 use App\Model\userModel;
 use App\Model\orderModel;
+use App\Model\servicesModel;
 use JWTAuth;
 use JWTFactory; 
 // use Session;
@@ -16,6 +17,7 @@ class apiController extends Controller
     {
          $this->user = new userModel();
          $this->orderModel = new orderModel();
+         $this->servicesModel = new servicesModel();
     }
 
     public function getLoginData(Request $request) {
@@ -315,4 +317,22 @@ class apiController extends Controller
 
         return json_encode($return);
     }
+
+    public function getServicesData(Request $request) {
+        $return = array();
+
+        $errors_message = "";
+        $request_data = $request->all();
+
+        $session_data = $request->session()->get('thew_session');
+
+        $responce = $this->servicesModel->getServices($request_data);
+
+        $return['DATA'] = $responce;
+        $return['ERROR_CODE'] = '0';
+        $return['ERROR_DESCRIPTION'] = '';
+
+        return json_encode($return);
+    }
+
 }
