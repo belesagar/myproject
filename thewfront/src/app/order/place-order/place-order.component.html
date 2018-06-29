@@ -93,7 +93,7 @@
 					</div> -->
 					<div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
 					<!--begin::Form-->
-					<form class="m-form m-form--fit m-form--label-align-right" novalidate #formdata="ngForm" (ngSubmit) = "onSubmit(formdata)">
+					<form class="m-form m-form--fit m-form--label-align-right" novalidate [formGroup]='placeorder' (ngSubmit) = "onSubmit()">
 						
 						<div class="m-portlet__body">
 							
@@ -101,16 +101,78 @@
 								<label for="">
 									Pick up date
 								</label>
-								<input type="date" name="pick_up_date" [(ngModel)]="pick_up_date" #pickupdate="ngModel" class="form-control m-input" placeholder="Enter date">
-								<div class="form-control-feedback" *ngIf="pickupdate.errors?.required && pickupdate.touched">
-									Please Enter Date
+								<input type="date" formControlName='pick_up_date' class="form-control m-input " placeholder="Enter date">
+								<div *ngIf="pick_up_date.invalid && (pick_up_date.dirty || pick_up_date.touched)">
+									<div class="form-control-feedback text-danger" *ngIf="pick_up_date.errors.required">
+										Please Enter Date
+									</div>
 								</div>
 							</div>
+
 							<div class="form-group m-form__group">
+									<div class="container">
+								<div class="row">
+									<div class="form-group">
+										<div class="searchable-container">
+											<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+												<div class="info-block block-info clearfix">
+													<div class="square-box pull-left">
+														<span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+													</div>
+													<div data-toggle="buttons" class="btn-group bizmoduleselect">
+														<label class="btn btn-default">
+															<div class="bizcontent">
+																<input type="checkbox" formControlName='var_id[]' name="var_id[]" autocomplete="off" value="">
+																<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																<h5>Coffee</h5>
+															</div>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+												<div class="info-block block-info clearfix">
+													<div class="square-box pull-left">
+														<span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+													</div>
+													<div data-toggle="buttons" class="btn-group bizmoduleselect">
+														<label class="btn btn-default">
+															<div class="bizcontent">
+																<input type="checkbox" formControlName='var_id[]' name="var_id[]" autocomplete="off" value="">
+																<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																<h5>Tea</h5>
+															</div>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+												<div class="info-block block-info clearfix">
+													<div class="square-box pull-left">
+														<span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+													</div>
+													<div data-toggle="buttons" class="btn-group bizmoduleselect">
+														<label class="btn btn-default">
+															<div class="bizcontent">
+																<input type="checkbox" formControlName='var_id[]' name="var_id[]" autocomplete="off" value="">
+																<span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+																<h5>Fruit Juice</h5>
+															</div>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+							</div>
+
+							<div class="form-group m-form__group"> 
 								<label for="exampleSelect1">
 									Pick up Slot
 								</label>
-								<select class="form-control m-input m-input--air" id="exampleSelect1" name="slot" [(ngModel)]="pick_up_slot" #pickupslot="ngModel">
+								<select class="form-control m-input m-input--air selectBox" id="exampleSelect1" formControlName='slot'>
 								<option value="">
 									1
 								</option>
@@ -127,59 +189,86 @@
 									5
 								</option>
 								</select>
-								<div class="form-control-feedback" *ngIf="pickupslot.errors?.required && pickupslot.touched">
-															Please Select Slot
-														</div>
+								<div class="form-control-feedback" *ngIf="slot.invalid && (slot.dirty || slot.touched)">
+									<div class="form-control-feedback text-danger" *ngIf="slot.errors.required">
+											Please Select Slot
+									</div>	
+									
+								</div>
 							</div>
 							<div class="form-group m-form__group">
 									<label for="">
 										Name
 									</label>
-									<input type="text" [(ngModel)]="name" #userName="ngModel" name="name" class="form-control m-input" placeholder="Enter date">
-									<div class="form-control-feedback" *ngIf="userName.errors?.required && userName.touched">
-										Please Enter Name
+									<input type="text" formControlName='name' [(ngModel)]="username" class="form-control m-input" placeholder="Enter name">
+									<div class="form-control-feedback" *ngIf="name.invalid && (name.dirty || name.touched)">
+										<div class="form-control-feedback text-danger" *ngIf="name.errors.required">
+												Please Enter Name 
+										</div>
+										<div class="form-control-feedback text-danger" *ngIf="name.errors.minlength">
+											Please enter at least 3 characters.
+										</div>	
+										<div class="form-control-feedback text-danger" *ngIf="name.errors.pattern">
+											Please enter valid name.
+										</div>
 									</div>
+									
 		  					</div>
 		  					<div class="form-group m-form__group">
 									<label for="">
 										Mobile No.
 									</label>
-									<input type="number" name="mobile" [(ngModel)]="mobile" #mobileno="ngModel" class="form-control m-input" placeholder="Enter date">
-									<div class="form-control-feedback" *ngIf="mobileno.errors?.required && mobileno.touched">
-										Please Mobile No.
-									</div> 
+									<input type="number" formControlName='mobile' [(ngModel)]="usermobile" class="form-control m-input" placeholder="Enter Mobile No." oninput="if(value.length>10)value=value.slice(0,10)">
+									<div class="form-control-feedback" *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)">
+										<div class="form-control-feedback text-danger" *ngIf="mobile.errors.required">
+												Please Mobile No.
+										</div>	
+										<div class="form-control-feedback text-danger" *ngIf="mobile.errors.minlength">
+											Please enter at least 10 characters.
+										</div>
+									</div>
+									 
 							</div>
 							<div class="form-group m-form__group">
 								<label for="exampleTextarea">
 									Address
 								</label>
-								<textarea class="form-control m-input" name="address" [(ngModel)]="address" id="exampleTextarea" rows="3"></textarea>
-								<div class="form-control-feedback" *ngIf="pickupdate.errors?.required && pickupdate.touched">
-										Please Enter Address.
+								<textarea class="form-control m-input" formControlName='address' [(ngModel)]="useraddress" id="exampleTextarea" rows="3"></textarea>
+								<div class="form-control-feedback" *ngIf="address.invalid && (address.dirty || address.touched)">
+									<div class="form-control-feedback text-danger" *ngIf="address.errors.required">
+											Address Required.
+									</div>	
 								</div>
+								
 							</div>
 							<div class="form-group m-form__group">
 								<label for="">
 									Landmark
 								</label>
-								<input type="text" name="landmark" [(ngModel)]="landmark"  class="form-control m-input" placeholder="Enter date">
-								<div class="form-control-feedback" *ngIf="pickupdate.errors?.required && pickupdate.touched">
-									Landmark Required.
+								<input type="text" formControlName='landmark' [(ngModel)]="userlandmark" class="form-control m-input" placeholder="Enter Landmark">
+								<div class="form-control-feedback" *ngIf="landmark.invalid && (landmark.dirty || landmark.touched)">
+									<div class="form-control-feedback text-danger" *ngIf="landmark.errors.required">
+										Landmark Required.
+									</div>	
 								</div>
 							</div>
 							<div class="form-group m-form__group">
 								<label for="">
 									Pincode
 								</label>
-								<input type="text" name="pincode" [(ngModel)]="pincode" class="form-control m-input" placeholder="Enter date">
-								<div class="form-control-feedback" *ngIf="pickupdate.errors?.required && pickupdate.touched">
-									Pincode Required.
+								<input type="number" formControlName='pincode' [(ngModel)]="userpincode" class="form-control m-input" placeholder="Enter Pincode">
+								<div class="form-control-feedback" *ngIf="pincode.invalid && (pincode.dirty || pincode.touched)">
+									<div class="form-control-feedback text-danger" *ngIf="pincode.errors.required">
+										Pincode Required.
+									</div>	
 								</div>
+								
 							</div>
 						</div>
 						<div class="m-portlet__foot m-portlet__foot--fit">
 							<div class="m-form__actions">
-								<button type="submit" class="btn btn-primary">
+									<!-- [disabled]="!placeorder.valid" -->
+								<button type="submit" class="btn btn-primary"> 
 									Submit
 								</button>
 								<button type="reset" class="btn btn-secondary">

@@ -1,0 +1,105 @@
+<div class="m-grid__item m-grid__item--fluid m-wrapper">
+  <div class="m-subheader ">
+  <div class="d-flex align-items-center">
+    <div class="mr-auto">
+      <h3 class="m-subheader__title">
+        Welcome Profile
+      </h3>								
+    </div>							
+  </div>
+</div>
+
+<div class="m-content">
+  <div class="row">
+    
+    <div class="col-xl-12 col-lg-8">
+      <div class="m-portlet m-portlet--full-height m-portlet--tabs  ">
+        
+        <div class="tab-content">
+          <div class="tab-pane active" id="m_user_profile_tab_1">
+            <form class="m-form m-form--fit m-form--label-align-right" novalidate #formdata="ngForm" (ngSubmit) = "onSubmitt(formdata)">
+					
+              <div class="m-portlet__body">
+                
+                <div class="form-group m-form__group">
+									<label for="">
+										Email
+									</label>
+									<input type="text" [(ngModel)]="email" #useremail="ngModel" name="email" class="form-control m-input" placeholder="Enter Email">
+									<span *ngIf="useremail.errors?.required && useremail.touched">Name is required</span>
+		  					</div>
+                 
+                <div class="form-group m-form__group">
+									<label for="">
+										Name
+									</label>
+									<input type="text" [(ngModel)]="name" #userName="ngModel" name="name" class="form-control m-input" placeholder="Enter Name">
+									<div class="form-control-feedback" *ngIf="userName.errors?.required && userName.touched">
+										Please Enter Name
+									</div>
+		  					</div>
+		  					
+							<div class="form-group m-form__group">
+								<label for="exampleTextarea">
+									Address
+								</label>
+								<textarea class="form-control m-input" name="address" #useraddress="ngModel" [(ngModel)]="address" id="exampleTextarea" rows="3"></textarea>
+								<div class="form-control-feedback" *ngIf="useraddress.errors?.required && useraddress.touched">
+										Please Enter Address.
+								</div>
+							</div>
+							<div class="form-group m-form__group">
+								<label for="">
+									Landmark
+								</label>
+								<input type="text" name="landmark" [(ngModel)]="landmark" #userlandmark="ngModel" class="form-control m-input" placeholder="Enter Landmark">
+								<div class="form-control-feedback" *ngIf="userlandmark.errors?.required && userlandmark.touched">
+									Landmark Required.
+								</div>
+							</div>
+							<div class="form-group m-form__group">
+								<label for="">
+									Pincode
+								</label>
+								<input type="text" name="pincode" [(ngModel)]="pincode" #userpincode="ngModel" class="form-control m-input" placeholder="Enter Pincode">
+								<div class="form-control-feedback" *ngIf="userpincode.errors?.required && userpincode.touched">
+									Pincode Required.
+								</div>
+							</div>
+              <div class="form-group m-form__group">
+                <label for="">
+                  Mobile No.
+                </label>
+                <input type="number" name="mobile" [(ngModel)]="mobile" #mobileno="ngModel" class="form-control m-input" placeholder="Enter Mobile No.">
+                <div class="form-control-feedback" *ngIf="mobileno.errors?.required && mobileno.touched">
+                  Please Mobile No.
+                </div> 
+            </div>
+              </div>
+              </form>
+              <div class="m-portlet__foot m-portlet__foot--fit">
+                <div class="m-form__actions">
+                  <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-7">
+                      <button type="submit" class="btn btn-accent m-btn m-btn--custom purplebtn">
+                        Save
+                      </button>
+                      <!-- &nbsp;&nbsp;
+                      <a href="dashboard" class="btn btn-secondary m-btn m-btn--air m-btn--custom">
+                        Cancel
+                      </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!--</form>-->
+            
+          </div>
+          <!-- <div class="tab-pane active" id="m_user_profile_tab_2"></div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>		
+</div>

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 
@@ -27,6 +27,7 @@ import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { ErrorpageComponent } from './layout/errorpage/errorpage.component';
 import { ServicesComponent } from './services/services.component';
 import { RefferandearnComponent } from './refferandearn/refferandearn.component';
+import { MyprofileComponent } from './myprofile/myprofile.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { RefferandearnComponent } from './refferandearn/refferandearn.component'
     LoaderComponent,
     ErrorpageComponent,
     ServicesComponent,
-    RefferandearnComponent
+    RefferandearnComponent,
+    MyprofileComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { RefferandearnComponent } from './refferandearn/refferandearn.component'
     FormsModule,
     HttpClientModule,
     LoadingModule,
-    Ng4LoadingSpinnerModule.forRoot()
+    Ng4LoadingSpinnerModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [
     {

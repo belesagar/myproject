@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
-import { version } from 'punycode';
 import { VerifyotpComponent } from './verifyotp/verifyotp.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -14,6 +13,7 @@ import { OrderdetailsComponent } from './order/orderdetails/orderdetails.compone
 import { ErrorpageComponent } from './layout/errorpage/errorpage.component';
 import { ServicesComponent } from './services/services.component';
 import { RefferandearnComponent } from './refferandearn/refferandearn.component';
+import { MyprofileComponent } from './myprofile/myprofile.component';
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
@@ -25,13 +25,14 @@ const routes: Routes = [
     path: '', 
     component: MiddelComponent,
     children: [
-      {path: 'dashboard', component: DashboardComponent, pathMatch: 'full'},
+      {path:'dashboard', component: DashboardComponent, pathMatch: 'full'},
       {path:'orderlist', component:OrderlistComponent},
       {path:'userlist', component:UserlistComponent},
       {path:'orderdetails/:id', component:OrderdetailsComponent},
       {path:'placeorder', component:PlaceOrderComponent},
       {path:'services', component:ServicesComponent},
       {path:'refferandearn', component:RefferandearnComponent},
+      {path:'profile', component:MyprofileComponent},
       {path:'errorpage', component:ErrorpageComponent},
     ]
 },
@@ -46,4 +47,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [DashboardComponent,LoginComponent,HeaderComponent,VerifyotpComponent,UserlistComponent,PlaceOrderComponent,OrderdetailsComponent,LogoutComponent,ErrorpageComponent,ServicesComponent,RefferandearnComponent]
+export const routingComponents = [DashboardComponent,LoginComponent,HeaderComponent,VerifyotpComponent,UserlistComponent,PlaceOrderComponent,OrderdetailsComponent,LogoutComponent,ErrorpageComponent,ServicesComponent,RefferandearnComponent,MyprofileComponent]

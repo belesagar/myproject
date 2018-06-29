@@ -3,6 +3,7 @@
 #/public/storage
 #/storage/*.key
 /thew3/vendor
+/thewadmin/vendor
 #/.idea
 #/.vagrant
 #Homestead.json

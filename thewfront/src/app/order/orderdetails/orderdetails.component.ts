@@ -23,8 +23,9 @@ export class OrderdetailsComponent implements OnInit {
     "Delivered"
   ];
   orderdetails: string = "";
-  
   order_id:string;
+
+  paymentShow: boolean = false;
   
   constructor(private http: HttpClient,private router: Router,private route: ActivatedRoute,private commonservice:CommonService) { 
     
@@ -34,9 +35,7 @@ export class OrderdetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-
     
-
     this.commonservice.showloader();
     //This service for loading script
     this.commonservice.loadScript(url);
@@ -48,12 +47,18 @@ export class OrderdetailsComponent implements OnInit {
     
     let apiUrl = Constant.API_URL+`getOrderDetails`;
       return this.http.post(apiUrl,this.postData).subscribe(response => {
-        
+        console.log(response);
         if(response['ERROR_CODE'] == 0)
         {
           if(response['DATA'].length != 0)
           {
             this.orderdetails = response['DATA'][0];
+
+            if(this.orderdetails['total_amount'] > 0)
+            {
+                this.paymentShow = true;
+            }
+
             // console.log(this.orderdetails)
           }else{
              this.router.navigate(['/orderlist']);

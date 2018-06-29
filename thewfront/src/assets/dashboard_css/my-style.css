@@ -116,6 +116,11 @@ button.btn.m-btn.m-btn--pill.m-btn--custom.m-btn--air.m-login__btn.m-login__btn-
 .sendmobilebx{ position:relative; }
 button.btn.btn-accent.m-btn.m-btn--custom.purplebtn.sendotpmobilebtn{ position: absolute; top: 2px; right: 2px; z-index: 1; }
 
+.selectBox{
+    padding: 5px;
+}
+
+
 @media all and (min-width:320px) and (max-width:568px){
 	.m-portlet__head{ float:left; }
 	.createbtn { float: right; margin: 10px 0 0; }
